@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Política de Privacidade da extensão GP+ para Google Chrome." />
+  <meta name="description" content="Política de Privacidade do GP+: dados utilizados, serviços integrados, armazenamento e controles do usuário." />
   <title>Política de Privacidade — Extensão GP+</title>
   <style>
     :root {
@@ -39,222 +39,330 @@
   </style>
 </head>
 <body>
-  <div class="wrap">
+  <main class="wrap">
     <header>
       <h1>Política de Privacidade — GP+</h1>
       <p class="muted">Extensão para o navegador Google Chrome.<br />
-        Última atualização: <strong>13 de outubro de 2026</strong> · Versão 1.0.4</p>
+        Última atualização: <strong>23 de novembro de 2026</strong> · Versão 1.0.24</p>
     </header>
 
-    <h2>1. Quem somos</h2>
-    <p>
-      A extensão <strong>GP+</strong> (“extensão”, “nós”) é mantida por
-      <strong>Rafael Antunes Batista</strong>. Para qualquer dúvida sobre privacidade ou sobre o
-      tratamento dos seus dados, entre em contato pelo e-mail
-      <a href="mailto:rafaelbatista.dominio@gmail.com">rafaelbatista.dominio@gmail.com</a>.
-    </p>
-    <p>
-      A GP+ é uma ferramenta de produtividade destinada a usuários dos sistemas internos
-      <strong>SGD e SGSAI da Domínio Sistemas</strong>. Ela só atua nas páginas e nos serviços
-      descritos abaixo e foi projetada para tratar o mínimo de dados necessário ao seu
-      funcionamento.
-    </p>
+    <section aria-labelledby="quem-somos">
+      <h2 id="quem-somos">1. Quem somos</h2>
+      <p>A extensão <strong>GP+</strong> é mantida por <strong>Rafael Antunes Batista</strong>.
+        Para dúvidas sobre privacidade ou tratamento de dados, entre em contato pelo e-mail
+        <a href="mailto:rafaelbatista.dominio@gmail.com">rafaelbatista.dominio@gmail.com</a>.</p>
+      <p>O GP+ oferece ferramentas de produtividade para usuários autorizados dos sistemas
+        <strong>SGD e SGSAI da Domínio Sistemas</strong>. Auxilia na edição e revisão de anotações
+        e definições, vinculação de solicitações, análise por inteligência artificial, organização
+        de listas, prioridades, notificações, acompanhamento de atendimentos, consulta de versões
+        e personalização da interface. Também oferece reconhecimento local para automatizar a
+        grade de verificação visual apresentada pelo SGD, conforme os controles da extensão.</p>
+      <p>As integrações corporativas dependem de acesso autorizado aos respectivos sistemas e
+        serviços. O ambiente de demonstração do SGD tem controle próprio de habilitação.
+        Esta política descreve o tratamento realizado pelas funções do GP+.</p>
+    </section>
 
-    <h2>2. Resumo</h2>
-    <ul>
-      <li>A maior parte das informações fica <strong>armazenada apenas no seu navegador</strong>.</li>
-      <li>A extensão <strong>não vende</strong> dados pessoais e <strong>não usa</strong> os dados
-        para publicidade, criação de perfis, avaliação de crédito ou finalidades alheias ao seu propósito.</li>
-      <li>Alguns recursos enviam dados a serviços de terceiros (IA, correção de texto, fila de
-        prioridades, status de equipe e integrações corporativas) <strong>somente para executar
-        esses recursos</strong>, conforme a seção 4.</li>
-      <li>A extensão <strong>não inclui</strong> ferramentas de analytics, telemetria ou
-        rastreadores de navegação de terceiros, e não executa código remoto.</li>
-    </ul>
+    <section aria-labelledby="resumo">
+      <h2 id="resumo">2. Resumo</h2>
+      <ul>
+        <li>Preferências, notas, rascunhos, histórico de conversas e outros estados são mantidos
+          no perfil do navegador. Algumas preferências do editor podem ser sincronizadas pela
+          infraestrutura do Chrome, conforme as configurações da conta e do navegador.</li>
+        <li>IA, correção externa, colaboração da equipe e integrações de anexos enviam os dados
+          necessários aos respectivos serviços, conforme a seção 4. O texto extraído localmente
+          de um anexo pode ser enviado ao serviço de IA quando incluído em uma solicitação.</li>
+        <li>O reconhecimento visual da grade utiliza modelo e runtime incluídos na extensão,
+          com processamento local. O ditado utiliza o reconhecimento de voz do navegador e
+          pode envolver o envio de áudio ao serviço do próprio navegador.</li>
+        <li>O GP+ <strong>não vende dados pessoais</strong> e não os utiliza para publicidade,
+          criação de perfis publicitários, avaliação de crédito ou finalidades alheias ao
+          seu propósito.</li>
+        <li>O pacote não inclui SDK de publicidade nem rastreador geral dos sites visitados.
+          Há diagnósticos locais e eventos de trabalho compartilhados pelas integrações.
+          O código executado pela extensão está incluído no pacote; as respostas dos serviços
+          integrados são tratadas como dados.</li>
+      </ul>
+    </section>
 
-    <h2>3. Dados que a extensão trata</h2>
-    <div class="table-wrap">
-    <table>
-      <thead>
-        <tr><th>Categoria</th><th>Exemplos</th><th>Finalidade</th><th>Onde fica</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Configurações e conteúdo do usuário</td>
-          <td>Preferências, tema, lembretes, mensagens rápidas, SA/NE favoritadas, bloco de notas
-            por PSAI, dicionário pessoal do corretor</td>
-          <td>Fazer a extensão funcionar e lembrar suas escolhas</td>
-          <td>Local, no seu navegador (<code>chrome.storage</code> / IndexedDB)</td>
-        </tr>
-        <tr>
-          <td>Rascunhos e backups</td>
-          <td>Texto de trâmites, anotações e definições em edição; histórico de versões</td>
-          <td>Salvamento automático e recuperação após recarregar a página ou perder a sessão</td>
-          <td>Local, no seu navegador; cópias de backup só são gravadas na sua pasta Downloads quando o recurso está ativo</td>
-        </tr>
-        <tr>
-          <td>Credenciais de autenticação</td>
-          <td>Token de sessão (JWT) da plataforma de IA da Thomson Reuters em que você já está
-            logado; token OAuth da Microsoft; chaves de API de IA que você informar</td>
-          <td>Autenticar, em seu nome, as chamadas aos serviços que você utiliza</td>
-          <td>Local, no seu navegador. Enviado apenas ao respectivo serviço de origem</td>
-        </tr>
-        <tr>
-          <td>Conteúdo enviado para processamento</td>
-          <td>Texto de solicitações (SSC/SA/NE), definições de PSAI e anotações que você decide
-            analisar ou revisar</td>
-          <td>Análise por IA, verificação do padrão de escrita e correção ortográfica</td>
-          <td>Enviado ao provedor correspondente durante a operação</td>
-        </tr>
-        <tr>
-          <td>Áudio do microfone</td>
-          <td>Fala capturada quando você aciona o ditado por voz ou grava uma observação</td>
-          <td>Transcrever a fala em texto</td>
-          <td>Processado pelo reconhecimento de voz do navegador (Google Chrome). Usado apenas
-            enquanto você mantém o ditado ativo</td>
-        </tr>
-        <tr>
-          <td>Dados de trabalho da equipe</td>
-          <td>Nome/usuário do analista, números de PSAI, ordem de análise, observações da
-            coordenação, transferências de responsável e indicadores de status</td>
-          <td>Ordem de análise, avisos de prioridade, redistribuição e painel de status da equipe</td>
-          <td>Bancos Firebase (Realtime Database e Firestore, Google) gerenciados pelo responsável</td>
-        </tr>
-        <tr>
-          <td>Base contextual incluída</td>
-          <td>Catálogo de PSAIs/SAIs e definições usado como referência pela análise</td>
-          <td>Comparar a solicitação com casos semelhantes</td>
-          <td>Empacotado dentro da própria extensão e lido localmente</td>
-        </tr>
-        <tr>
-          <td>Dados de uso (local)</td>
-          <td>Contagem de uso de trâmites para sugerir atalhos</td>
-          <td>Sugerir mensagens e trâmites frequentes</td>
-          <td>Local, no seu navegador — não é enviado a nenhum servidor</td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
+    <section aria-labelledby="dados">
+      <h2 id="dados">3. Dados que a extensão trata</h2>
+      <p>Os dados utilizados dependem da tela acessada, da função utilizada e das configurações
+        escolhidas pelo usuário.</p>
+      <div class="table-wrap" role="region" aria-label="Categorias de dados e finalidades" tabindex="0">
+        <table>
+          <thead>
+            <tr><th scope="col">Categoria</th><th scope="col">Exemplos</th><th scope="col">Finalidade</th><th scope="col">Tratamento e destino</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Identificação e dados de trabalho</td>
+              <td>Nomes e identificadores de usuários, responsáveis, especialistas e membros da
+                equipe; e-mail quando informado ou presente em uma integração</td>
+              <td>Identificar autores e destinatários, associar atividades e apresentar informações da equipe</td>
+              <td>Perfil do navegador, sistemas corporativos e recursos de colaboração, conforme a função</td>
+            </tr>
+            <tr>
+              <td>Registros e conteúdo operacional</td>
+              <td>Identificadores e URLs de SA, NE, SSC, PSAI e SAI; títulos, definições, anotações,
+                trâmites, vínculos e situações</td>
+              <td>Consultar, editar e relacionar registros, navegar, analisar conteúdo e acompanhar solicitações</td>
+              <td>Sistemas Domínio, armazenamento do navegador e serviços de análise quando utilizados</td>
+            </tr>
+            <tr>
+              <td>Preferências, notas e rascunhos</td>
+              <td>Temas, fundos, lembretes, mensagens rápidas, favoritos, notas e conteúdo em edição</td>
+              <td>Manter escolhas do usuário, salvar o trabalho e permitir sua recuperação</td>
+              <td>Armazenamento do navegador; algumas preferências do editor usam sincronização do Chrome;
+                backups configurados e exportações geram arquivos no computador</td>
+            </tr>
+            <tr>
+              <td>Conversas e anexos</td>
+              <td>Perguntas, respostas, rascunhos, texto selecionado, documentos, imagens, nomes e metadados de arquivos</td>
+              <td>Conversar com o assistente, compor análises, editar imagens e gerar arquivos</td>
+              <td>Leitura local dos documentos; mensagens e contexto enviados à IA quando solicitados;
+                arquivos enviados ao destino de anexação quando esse recurso é utilizado</td>
+            </tr>
+            <tr>
+              <td>Autenticação</td>
+              <td>Cookies e tokens da sessão de IA, tokens OAuth Microsoft e credenciais de integração
+                ou do LanguageTool informadas pelo usuário</td>
+              <td>Autenticar chamadas aos serviços utilizados</td>
+              <td>Armazenamento utilizado pela extensão e respectivos serviços de autenticação ou integração</td>
+            </tr>
+            <tr>
+              <td>Eventos da equipe</td>
+              <td>Prioridades, transferências, observações, mudanças de situação, início e fim de edição,
+                autores, responsáveis e horários</td>
+              <td>Coordenar o trabalho, avisar sobre edição simultânea e emitir notificações</td>
+              <td>Firebase Realtime Database e Cloud Firestore, conforme o recurso</td>
+            </tr>
+            <tr>
+              <td>Áudio do microfone</td>
+              <td>Fala capturada quando o usuário inicia e permite o ditado</td>
+              <td>Converter fala em texto</td>
+              <td>Reconhecimento de voz do navegador, que pode encaminhar o áudio ao seu próprio serviço;
+                esse fluxo do GP+ não cria um arquivo de gravação de áudio</td>
+            </tr>
+            <tr>
+              <td>Grade de verificação visual</td>
+              <td>Imagens da grade e instrução do desafio apresentado pelo SGD</td>
+              <td>Executar o reconhecimento local e interagir com a grade</td>
+              <td>Processamento no computador, sem API externa de reconhecimento; a página do SGD mantém
+                sua comunicação com o próprio serviço de verificação</td>
+            </tr>
+            <tr>
+              <td>Base contextual e diagnósticos</td>
+              <td>Acervo SAI/PSAI, índices, caches, contagens e registros locais de falhas das integrações</td>
+              <td>Fornecer referências para as análises, reduzir consultas e identificar falhas</td>
+              <td>Recursos empacotados e armazenamento do navegador; trechos de contexto podem integrar
+                uma solicitação à IA</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>A extensão consulta abas abertas para localizar os sistemas integrados e relacionar a
+        operação à aba e ao registro corretos. URLs e identificadores operacionais podem integrar
+        o contexto, o histórico e estados locais. O GP+ não solicita a permissão
+        <code>history</code> nem implementa um histórico geral dos sites visitados.</p>
+    </section>
 
-    <h2>4. Compartilhamento com terceiros (subprocessadores)</h2>
-    <p>
-      Determinados recursos transmitem dados aos serviços abaixo apenas para executar a função
-      solicitada. Cada serviço possui sua própria política de privacidade:
-    </p>
-    <div class="table-wrap">
-    <table>
-      <thead>
-        <tr><th>Serviço</th><th>Quando é usado</th><th>O que é enviado</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Thomson Reuters AI Platform (Open Arena)</td>
-          <td>Análise de SSCs, análise de coerência e do padrão de escrita</td>
-          <td>Token de sessão e o texto a ser analisado</td>
-        </tr>
-        <tr>
-          <td>Google Gemini (opcional)</td>
-          <td>Somente se você configurar sua própria chave de API</td>
-          <td>Sua chave de API e o texto a ser processado</td>
-        </tr>
-        <tr>
-          <td>LanguageTool (languagetool.org / languagetoolplus.com)</td>
-          <td>Correção ortográfica, gramatical e de estilo</td>
-          <td>O texto a ser revisado</td>
-        </tr>
-        <tr>
-          <td>Google Firebase (Realtime Database e Firestore)</td>
-          <td>Ordem de análise, avisos de prioridade, redistribuição e status da equipe</td>
-          <td>Usuário do analista, números de PSAI, ordens, observações, transferências e status</td>
-        </tr>
-        <tr>
-          <td>Dashboard SA (dashboard-sa.sabrina-sa.workers.dev)</td>
-          <td>Exibir o nível da alteração ao lado do nível da PSAI</td>
-          <td>Número da PSAI/SA consultada</td>
-        </tr>
-        <tr>
-          <td>Reconhecimento de voz do Google Chrome</td>
-          <td>Ditado por voz e observações em áudio</td>
-          <td>O áudio capturado enquanto o ditado está ativo</td>
-        </tr>
-        <tr>
-          <td>Microsoft (Power Automate / SharePoint / Entra ID)</td>
-          <td>Integrações corporativas opcionais (formulários, anexos)</td>
-          <td>Token OAuth e dados do fluxo solicitado</td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
-    <div class="note">
-      A extensão não compartilha dados com terceiros para nenhuma finalidade além da execução
-      direta dos recursos utilizados por você. As páginas do SGD e do SGSAI são acessadas com a
-      sua própria sessão, apenas para ler e preencher as telas em que você está trabalhando.
-    </div>
+    <section aria-labelledby="servicos">
+      <h2 id="servicos">4. Serviços externos e compartilhamento</h2>
+      <p>As funções integradas utilizam os serviços descritos abaixo. Cada operador também possui
+        suas próprias regras de acesso, privacidade, retenção e processamento.</p>
+      <div class="table-wrap" role="region" aria-label="Serviços integrados e dados utilizados" tabindex="0">
+        <table>
+          <thead>
+            <tr><th scope="col">Serviço</th><th scope="col">Quando é utilizado</th><th scope="col">Dados envolvidos</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SGD e SGSAI da Domínio Sistemas</td>
+              <td>Consulta, vinculação, edição, gravação e anexação de conteúdo</td>
+              <td>Conteúdo e identificadores dos registros necessários à operação, com a sessão autorizada do usuário</td>
+            </tr>
+            <tr>
+              <td>Thomson Reuters OpenArena</td>
+              <td>Conversa com o assistente e análises de solicitações, definições e padrão de escrita</td>
+              <td>Token de autenticação, perguntas, mensagens, conteúdo dos registros, trechos de contexto
+                e texto de anexos incluídos na solicitação</td>
+            </tr>
+            <tr>
+              <td>LanguageTool</td>
+              <td>Correção externa quando o usuário habilita o envio; teste de conexão quando acionado</td>
+              <td>Texto necessário à revisão e credenciais opcionais da conta Plus, quando configuradas</td>
+            </tr>
+            <tr>
+              <td>Google Firebase — Realtime Database e Cloud Firestore</td>
+              <td>Status da equipe, prioridades, transferências e avisos operacionais, incluindo edição de PSAI</td>
+              <td>Nomes, responsáveis, identificadores de PSAI, prioridades, observações, eventos, autores e horários</td>
+            </tr>
+            <tr>
+              <td>Microsoft — Power Automate, SharePoint e Entra ID</td>
+              <td>Autenticação e integrações de anexos, conforme o destino e a ação configurados</td>
+              <td>Tokens e credenciais necessários à integração, arquivos, nomes, conteúdo e metadados dos anexos</td>
+            </tr>
+            <tr>
+              <td>Dashboard SA — <code>dashboard-sa.sabrina-sa.workers.dev</code></td>
+              <td>Consulta de dados usados para apresentar o nível da SAI/PSAI</td>
+              <td>Consultas de configuração da equipe e dados do analista, com identificador e ano quando aplicáveis</td>
+            </tr>
+            <tr>
+              <td>Serviços do navegador</td>
+              <td>Sincronização de algumas preferências e reconhecimento de voz, conforme a configuração e a função</td>
+              <td>Preferências sincronizadas e áudio capturado durante o ditado, conforme o processamento do navegador</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>IA e leitura de documentos.</strong> Os leitores de PDF, DOCX e HTML extraem o
+        texto localmente. Quando esse texto é incorporado à pergunta ou à análise, ele é enviado
+        ao OpenArena. A integração utiliza os serviços da Thomson Reuters e, em fluxos de análise,
+        um transporte WebSocket associado à integração em Amazon API Gateway. A retenção das
+        solicitações, os modelos disponíveis e o uso realizado pelo provedor seguem as condições
+        do serviço e da conta corporativa; o processamento local do arquivo não significa que o
+        texto permaneça local durante uma análise.</p>
+      <p><strong>Corretor.</strong> O envio externo ao LanguageTool está desativado por padrão.
+        Quando autorizado, utiliza <code>api.languagetool.org</code> ou
+        <code>api.languagetoolplus.com</code>. O teste de conexão consulta o serviço quando acionado.</p>
+      <p><strong>Colaboração.</strong> Os participantes com acesso aos recursos e bancos podem
+        visualizar os dados de trabalho compartilhados. A configuração de acesso e a retenção
+        do Firebase pertencem aos administradores dos projetos utilizados. Desativar uma
+        notificação não apaga o evento já gravado.</p>
+      <p><strong>Anexos.</strong> Arquivos podem ser enviados ao fluxo Power Automate configurado
+        ou ao SharePoint corporativo. A autenticação pode utilizar Microsoft Entra ID e a
+        credencial de segurança configurada para o destino. O destino escolhido determina o
+        armazenamento e o tratamento posteriores.</p>
+      <p><strong>Ditado.</strong> A conversão da fala utiliza o reconhecimento de voz disponível
+        no navegador. O navegador pode encaminhar áudio a seu próprio serviço; o GP+ não garante
+        transcrição exclusivamente local. O texto resultante entra no campo escolhido e segue
+        o tratamento do recurso em que for utilizado.</p>
+      <p><strong>Outras conexões.</strong> Links, imagens e anexos presentes nos documentos ou
+        inseridos pelo usuário podem gerar conexões aos respectivos endereços ao serem abertos
+        ou exibidos. Serviços externos recebem os dados necessários à requisição e podem receber
+        endereço IP e outros metadados normais de conexão. Seus registros técnicos e locais de
+        processamento são definidos pelos respectivos operadores.</p>
+      <div class="note">Ao escolher conteúdo para análise, colaboração ou anexação, siga as regras
+        de sua organização e confira o destino da operação. Os temas, fundos e o modelo de
+        reconhecimento fornecidos com a extensão são recursos locais.</div>
+    </section>
 
-    <h2>5. Permissões do navegador e por quê</h2>
-    <ul>
-      <li><strong>storage</strong> — salvar configurações, rascunhos e dados locais.</li>
-      <li><strong>cookies</strong> — ler o token de sessão da plataforma de IA na qual você já
-        está logado, para autenticar as chamadas em seu nome.</li>
-      <li><strong>alarms</strong> — executar verificações periódicas (lembretes, pendências,
-        prioridades, status e renovação de token).</li>
-      <li><strong>tabs / scripting</strong> — atuar nas páginas do SGD e do SGSAI e abrir as
-        páginas necessárias (login, opções, PSAI).</li>
-      <li><strong>identity</strong> — realizar o login OAuth com a Microsoft (recurso opcional).</li>
-      <li><strong>notifications</strong> — exibir lembretes e avisos de prioridade.</li>
-      <li><strong>downloads</strong> — salvar localmente backups, anotações e exportações (CSV/texto) quando você solicitar ou ativar o backup.</li>
-      <li><strong>offscreen</strong> — tocar o som do aviso de prioridade em segundo plano.</li>
-      <li><strong>Acesso a sites</strong> — restrito aos domínios do SGD/SGSAI da Domínio, da
-        Thomson Reuters, do LanguageTool, do Firebase, do Dashboard SA e da Microsoft.</li>
-    </ul>
+    <section aria-labelledby="permissoes">
+      <h2 id="permissoes">5. Permissões do navegador e suas finalidades</h2>
+      <ul>
+        <li><strong>storage</strong> — salvar preferências, notas, rascunhos, histórico, estados de
+          acompanhamento, caches e configurações. Algumas preferências do editor utilizam a
+          sincronização do Chrome.</li>
+        <li><strong>cookies</strong> — localizar e acompanhar o token da sessão já autenticada
+          na plataforma de IA da Thomson Reuters.</li>
+        <li><strong>alarms</strong> — programar verificações de pendências, prioridades,
+          eventos de edição, status e outras rotinas de acompanhamento e notificação.</li>
+        <li><strong>scripting</strong> — executar scripts e estilos incluídos na extensão nas
+          telas autorizadas e carregar funções sob demanda, incluindo o ambiente de demonstração
+          quando habilitado.</li>
+        <li><strong>tabs</strong> — localizar as abas dos sistemas integrados, associar operações
+          ao registro correto e abrir, atualizar ou encerrar abas nos fluxos da extensão.</li>
+        <li><strong>identity</strong> — executar a autenticação OAuth Microsoft nas integrações de anexos.</li>
+        <li><strong>notifications</strong> — exibir avisos de prioridade, pendências, acompanhamento
+          e eventos da equipe, com acesso ao registro relacionado.</li>
+        <li><strong>downloads</strong> — salvar os backups do bloco de notas em Downloads,
+          conforme as preferências do usuário.</li>
+        <li><strong>offscreen</strong> — manter o documento local compartilhado usado pelos
+          alertas sonoros e pelo reconhecimento visual.</li>
+        <li><strong>Acesso a sites</strong> — acessar os domínios autorizados dos sistemas
+          Domínio, Thomson Reuters, Firebase, LanguageTool, Microsoft e Dashboard SA para
+          executar as respectivas integrações.</li>
+      </ul>
+    </section>
 
-    <h2>6. Retenção e exclusão</h2>
-    <p>
-      Os dados locais permanecem no seu navegador até que você os apague ou remova a extensão.
-      Os arquivos de backup gravados na pasta Downloads ficam sob seu controle e podem ser
-      apagados a qualquer momento. Os dados enviados a terceiros seguem as políticas de cada
-      serviço. Para solicitar a exclusão de dados de trabalho da equipe armazenados no Firebase,
-      contate <a href="mailto:rafaelbatista.dominio@gmail.com">rafaelbatista.dominio@gmail.com</a>.
-    </p>
+    <section aria-labelledby="retencao">
+      <h2 id="retencao">6. Armazenamento, retenção e exclusão</h2>
+      <p>O GP+ utiliza armazenamento do perfil do navegador, incluindo armazenamento local,
+        armazenamento de sessão, IndexedDB e, em alguns recursos, armazenamento associado à
+        página. Esses mecanismos mantêm preferências, notas, rascunhos, histórico do assistente,
+        estados de acompanhamento, índices, caches, credenciais de integração e dados temporários.</p>
+      <p>Algumas preferências gerais do editor utilizam <code>chrome.storage.sync</code> e podem
+        ser sincronizadas pela infraestrutura do Chrome, conforme a conta e as configurações do
+        navegador. Por isso, nem toda preferência fica restrita a um único computador.</p>
+      <p>O histórico do assistente guarda mensagens, rascunhos e metadados dos anexos localmente.
+        Os corpos dos arquivos não são guardados como arquivos de anexo nesse histórico; o texto
+        que aparecer nas mensagens e respostas pode permanecer nas conversas arquivadas.</p>
+      <p>Backups configurados do bloco de notas são salvos como arquivos na pasta Downloads,
+        inclusive automaticamente quando a preferência correspondente estiver ativa. Exportações
+        de conversas e relatórios também geram arquivos no computador. Esses arquivos não são
+        apagados automaticamente ao remover a extensão.</p>
+      <p>Não há um prazo único de exclusão automática para todos os dados locais. Estados de
+        sessão e caches possuem ciclos próprios; preferências, notas e históricos podem permanecer
+        até serem apagados pelo usuário ou pelo gerenciamento do perfil do navegador. Há também
+        diagnósticos locais de falhas das integrações e contagens de resultados das análises.</p>
+      <p>O usuário pode excluir conversas pelo histórico, apagar ou exportar conteúdos nos controles
+        disponíveis e gerenciar os dados do perfil da extensão e dos sites utilizados. Dados
+        sincronizados e arquivos exportados ou de backup precisam ser tratados também nas
+        respectivas contas e pastas.</p>
+      <p>Dados já gravados no SGD, SGSAI, Firebase, Microsoft, serviço de IA, corretor ou outros
+        serviços seguem os prazos e procedimentos dos respectivos operadores. Remover a extensão
+        não solicita a exclusão desses registros. Para pedidos sobre dados sob responsabilidade
+        do mantenedor do GP+, contate
+        <a href="mailto:rafaelbatista.dominio@gmail.com">rafaelbatista.dominio@gmail.com</a>.</p>
+    </section>
 
-    <h2>7. Segurança</h2>
-    <p>
-      As comunicações com serviços externos usam conexões criptografadas (HTTPS/WSS). Chaves e
-      tokens ficam armazenados localmente no navegador. Ainda assim, nenhum método de transmissão
-      ou armazenamento é 100% seguro; recomendamos manter seu navegador e seu sistema atualizados.
-    </p>
+    <section aria-labelledby="seguranca">
+      <h2 id="seguranca">7. Segurança</h2>
+      <p>As integrações utilizam HTTPS ou WSS nas conexões com os serviços. O GP+ verifica origens
+        e destinos em fluxos sensíveis e mantém as credenciais necessárias no contexto de
+        armazenamento utilizado pela extensão. Esse armazenamento não equivale a um cofre com
+        criptografia própria garantida pelo GP+.</p>
+      <p>Proteja sua conta e seu perfil do navegador, mantenha navegador e sistema atualizados,
+        confira os destinos de anexos e siga as orientações de segurança da sua organização.</p>
+    </section>
 
-    <h2>8. Seus direitos</h2>
-    <p>
-      Conforme a legislação aplicável (incluindo a LGPD, no Brasil), você pode solicitar acesso,
-      correção, portabilidade ou exclusão dos seus dados pessoais, bem como informações sobre o
-      tratamento. Para exercer esses direitos, contate
-      <a href="mailto:rafaelbatista.dominio@gmail.com">rafaelbatista.dominio@gmail.com</a>.
-    </p>
+    <section aria-labelledby="direitos">
+      <h2 id="direitos">8. Seus direitos e controles</h2>
+      <p>Conforme a legislação aplicável, incluindo a LGPD no Brasil, você pode solicitar acesso,
+        correção, portabilidade ou exclusão de dados pessoais e informações sobre seu tratamento.
+        Encaminhe o pedido para
+        <a href="mailto:rafaelbatista.dominio@gmail.com">rafaelbatista.dominio@gmail.com</a>.</p>
+      <p>O atendimento depende de identificar o registro e o serviço envolvidos e verificar a
+        legitimidade do pedido. Para dados dos sistemas corporativos, o responsável poderá
+        orientar o usuário a procurar o administrador competente.</p>
+      <p>O usuário também pode ajustar as funções do GP+, desativar o envio externo do corretor,
+        interromper o ditado, revogar o acesso ao microfone e desativar ou remover a extensão pelo
+        gerenciamento de extensões do navegador.</p>
+    </section>
 
-    <h2>9. Uso limitado</h2>
-    <p>
-      O uso das informações recebidas pela extensão segue a
-      <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use" target="_blank" rel="noopener noreferrer">Política de Dados do Usuário da Chrome Web Store</a>,
-      incluindo os requisitos de uso limitado.
-    </p>
+    <section aria-labelledby="uso-limitado">
+      <h2 id="uso-limitado">9. Uso limitado</h2>
+      <p>O uso das informações recebidas pela extensão segue a
+        <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use" target="_blank" rel="noopener noreferrer">Política de Dados do Usuário da Chrome Web Store</a>,
+        incluindo os requisitos de uso limitado.</p>
+      <p>O tratamento descrito atende às funções de produtividade, edição, análise e colaboração
+        do GP+. A extensão não utiliza os dados para publicidade, venda, avaliação de crédito ou
+        finalidades alheias ao seu propósito. O pacote não implementa SDK de publicidade nem
+        envio dos diagnósticos locais a um serviço de análise publicitária. Isso não significa
+        ausência de registros nos serviços corporativos ou nos demais provedores integrados.</p>
+    </section>
 
-    <h2>10. Privacidade de crianças</h2>
-    <p>A extensão destina-se a uso profissional e não é direcionada a menores de 13 anos.</p>
+    <section aria-labelledby="criancas">
+      <h2 id="criancas">10. Privacidade de crianças</h2>
+      <p>A extensão destina-se ao uso profissional e não é direcionada a menores de 13 anos.</p>
+    </section>
 
-    <h2>11. Alterações nesta política</h2>
-    <p>
-      Esta política pode ser atualizada. Mudanças relevantes serão refletidas na data de
-      “Última atualização” no topo desta página.
-    </p>
+    <section aria-labelledby="alteracoes">
+      <h2 id="alteracoes">11. Alterações nesta política</h2>
+      <p>Esta política pode ser atualizada para refletir mudanças nas funções, nos destinos dos
+        dados ou nas práticas de tratamento. Mudanças relevantes serão refletidas na data de
+        atualização no topo desta página e na ficha da Chrome Web Store, conforme aplicável.</p>
+    </section>
 
-    <h2>12. Contato</h2>
-    <p>Responsável: <strong>Rafael Antunes Batista</strong><br />E-mail:
-      <a href="mailto:rafaelbatista.dominio@gmail.com">rafaelbatista.dominio@gmail.com</a></p>
+    <section aria-labelledby="contato">
+      <h2 id="contato">12. Contato</h2>
+      <p>Responsável: <strong>Rafael Antunes Batista</strong><br />
+        E-mail: <a href="mailto:rafaelbatista.dominio@gmail.com">rafaelbatista.dominio@gmail.com</a></p>
+    </section>
 
     <footer>
       <p class="muted">Esta política refere-se exclusivamente à extensão GP+ para Google Chrome.</p>
     </footer>
-  </div>
+  </main>
 </body>
 </html>
